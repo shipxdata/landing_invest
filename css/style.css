@@ -1020,7 +1020,6 @@ textarea.input {
   margin: 26px 0 40px
 }
 .footer {
-  background-color: #fff;
   position: relative;
   z-index: 10;
   padding-bottom: 25px;
@@ -2398,6 +2397,9 @@ textarea.input {
   .treasure__content {
     margin-top: -90px
   }
+  .leave .treasure__content {
+    margin-top: 0
+  }
   .treasure__cover {
     height: auto
   }
@@ -2567,7 +2569,7 @@ textarea.input {
     border: none;
     padding-top: 0;
     padding-bottom: 0;
-    background: 0 0
+    background: none center bottom/contain no-repeat,#fff
   }
   .footer__container {
     flex-direction: column

@@ -4360,6 +4360,7 @@
     const da = new DynamicAdapt("max");
     da.init();
     const htmlBody = document.documentElement;
+    const treasure = document.querySelector(".treasure");
     const treasureCover = document.querySelector(".treasure__cover");
     const crewSection = document.querySelector(".crew");
     const joinTitle = document.getElementById("join-title");
@@ -4467,6 +4468,7 @@
                         isSecondSwipe = true;
                         setClass(blockWay, true, "show");
                     } else if (swipeCount > 0) {
+                        setClass(treasure, true, "leave");
                         setClass(treasureCover, true, "show");
                         crewSection.scrollIntoView({
                             behavior: "smooth"
