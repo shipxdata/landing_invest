@@ -483,6 +483,7 @@
         }
         async function formSubmitAction(form, e) {
             const error = !form.hasAttribute("data-no-validate") ? formValidate.getErrors(form) : 0;
+            form.classList.add("_sending");
             if (error === 0) {
                 e.preventDefault();
                 const formAction = form.getAttribute("action") ? form.getAttribute("action").trim() : "#";
@@ -492,7 +493,6 @@
                     method: formMethod,
                     body: formData
                 });
-                form.classList.add("_sending");
                 let responseResult;
                 try {
                     responseResult = await response.json();
